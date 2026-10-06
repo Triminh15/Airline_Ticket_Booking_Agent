@@ -1,0 +1,305 @@
+{
+  "ReAct": {
+    "agent_name": "ReAct Pattern",
+    "total": 10,
+    "passed": 7,
+    "failed": 3,
+    "success_rate": 0.7,
+    "avg_latency_sec": 37.6,
+    "avg_tool_calls": 5.1,
+    "results": [
+      {
+        "test_id": "TC01",
+        "success": true,
+        "latency": 3.23,
+        "tool_calls": 2,
+        "messages": 5,
+        "reason": "Tìm thấy chuyến bay hợp lệ",
+        "error": ""
+      },
+      {
+        "test_id": "TC02",
+        "success": true,
+        "latency": 35.27,
+        "tool_calls": 9,
+        "messages": 12,
+        "reason": "Đặt vé thành công và đã xác thực trong Database (BK1001)",
+        "error": ""
+      },
+      {
+        "test_id": "TC03",
+        "success": false,
+        "latency": 19.88,
+        "tool_calls": 2,
+        "messages": 5,
+        "reason": "Chưa hoàn tất hủy vé",
+        "error": ""
+      },
+      {
+        "test_id": "TC04",
+        "success": true,
+        "latency": 84.0,
+        "tool_calls": 9,
+        "messages": 12,
+        "reason": "Đặt vé thành công và đã xác thực trong Database (BK1002)",
+        "error": ""
+      },
+      {
+        "test_id": "TC05",
+        "success": false,
+        "latency": 12.14,
+        "tool_calls": 2,
+        "messages": 5,
+        "reason": "Không tìm thấy mã booking ID trong câu trả lời",
+        "error": ""
+      },
+      {
+        "test_id": "TC06",
+        "success": true,
+        "latency": 69.49,
+        "tool_calls": 9,
+        "messages": 12,
+        "reason": "Đặt vé thành công và đã xác thực trong Database (BK1003)",
+        "error": ""
+      },
+      {
+        "test_id": "TC07",
+        "success": true,
+        "latency": 23.28,
+        "tool_calls": 2,
+        "messages": 5,
+        "reason": "Báo rõ không có chuyến",
+        "error": ""
+      },
+      {
+        "test_id": "TC08",
+        "success": false,
+        "latency": 35.65,
+        "tool_calls": 4,
+        "messages": 7,
+        "reason": "Không tìm thấy mã booking ID trong câu trả lời",
+        "error": ""
+      },
+      {
+        "test_id": "TC09",
+        "success": true,
+        "latency": 71.03,
+        "tool_calls": 9,
+        "messages": 12,
+        "reason": "Đặt vé thành công và đã xác thực trong Database (BK1004)",
+        "error": ""
+      },
+      {
+        "test_id": "TC10",
+        "success": true,
+        "latency": 22.0,
+        "tool_calls": 3,
+        "messages": 6,
+        "reason": "Tìm thấy chuyến bay hợp lệ",
+        "error": ""
+      }
+    ]
+  },
+  "PlanThenExecute": {
+    "agent_name": "Plan-then-Execute Pattern",
+    "total": 10,
+    "passed": 2,
+    "failed": 8,
+    "success_rate": 0.2,
+    "avg_latency_sec": 29.92,
+    "avg_tool_calls": 2.2,
+    "results": [
+      {
+        "test_id": "TC01",
+        "success": true,
+        "latency": 26.21,
+        "tool_calls": 2,
+        "messages": 6,
+        "reason": "Tìm thấy chuyến bay hợp lệ",
+        "error": ""
+      },
+      {
+        "test_id": "TC02",
+        "success": false,
+        "latency": 58.84,
+        "tool_calls": 8,
+        "messages": 12,
+        "reason": "Không tìm thấy mã booking ID trong câu trả lời",
+        "error": ""
+      },
+      {
+        "test_id": "TC03",
+        "success": false,
+        "latency": 22.59,
+        "tool_calls": 2,
+        "messages": 6,
+        "reason": "Chưa hoàn tất hủy vé",
+        "error": ""
+      },
+      {
+        "test_id": "TC04",
+        "success": false,
+        "latency": 27.59,
+        "tool_calls": 2,
+        "messages": 6,
+        "reason": "Không tìm thấy mã booking ID trong câu trả lời",
+        "error": ""
+      },
+      {
+        "test_id": "TC05",
+        "success": false,
+        "latency": 14.64,
+        "tool_calls": 2,
+        "messages": 6,
+        "reason": "Không tìm thấy mã booking ID trong câu trả lời",
+        "error": ""
+      },
+      {
+        "test_id": "TC06",
+        "success": false,
+        "latency": 27.83,
+        "tool_calls": 0,
+        "messages": 0,
+        "reason": "❌ Exception: RateLimitError",
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3pweyg7e57trhrww1k0v1yd` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 707, Requested 343. Please try again in 3s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+      },
+      {
+        "test_id": "TC07",
+        "success": true,
+        "latency": 21.57,
+        "tool_calls": 2,
+        "messages": 6,
+        "reason": "Báo rõ không có chuyến",
+        "error": ""
+      },
+      {
+        "test_id": "TC08",
+        "success": false,
+        "latency": 25.06,
+        "tool_calls": 0,
+        "messages": 4,
+        "reason": "Không tìm thấy mã booking ID trong câu trả lời",
+        "error": ""
+      },
+      {
+        "test_id": "TC09",
+        "success": false,
+        "latency": 57.64,
+        "tool_calls": 4,
+        "messages": 10,
+        "reason": "Không tìm thấy mã booking ID trong câu trả lời",
+        "error": ""
+      },
+      {
+        "test_id": "TC10",
+        "success": false,
+        "latency": 17.26,
+        "tool_calls": 0,
+        "messages": 0,
+        "reason": "❌ Exception: RateLimitError",
+        "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m3pweyg7e57trhrww1k0v1yd` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 702, Requested 342. Please try again in 2.639999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+      }
+    ]
+  },
+  "Hybrid": {
+    "agent_name": "Hybrid Pattern",
+    "total": 10,
+    "passed": 5,
+    "failed": 5,
+    "success_rate": 0.5,
+    "avg_latency_sec": 57.32,
+    "avg_tool_calls": 5.6,
+    "results": [
+      {
+        "test_id": "TC01",
+        "success": false,
+        "latency": 61.86,
+        "tool_calls": 4,
+        "messages": 10,
+        "reason": "Chưa đưa ra kết quả tìm kiếm rõ ràng",
+        "error": ""
+      },
+      {
+        "test_id": "TC02",
+        "success": true,
+        "latency": 48.68,
+        "tool_calls": 6,
+        "messages": 12,
+        "reason": "Đặt vé thành công và đã xác thực trong Database (BK1005)",
+        "error": ""
+      },
+      {
+        "test_id": "TC03",
+        "success": false,
+        "latency": 40.84,
+        "tool_calls": 2,
+        "messages": 8,
+        "reason": "Chưa hoàn tất hủy vé",
+        "error": ""
+      },
+      {
+        "test_id": "TC04",
+        "success": false,
+        "latency": 42.97,
+        "tool_calls": 2,
+        "messages": 6,
+        "reason": "Không tìm thấy mã booking ID trong câu trả lời",
+        "error": ""
+      },
+      {
+        "test_id": "TC05",
+        "success": false,
+        "latency": 35.95,
+        "tool_calls": 2,
+        "messages": 6,
+        "reason": "Không tìm thấy mã booking ID trong câu trả lời",
+        "error": ""
+      },
+      {
+        "test_id": "TC06",
+        "success": false,
+        "latency": 39.2,
+        "tool_calls": 2,
+        "messages": 6,
+        "reason": "Không tìm thấy mã booking ID trong câu trả lời",
+        "error": ""
+      },
+      {
+        "test_id": "TC07",
+        "success": true,
+        "latency": 36.35,
+        "tool_calls": 4,
+        "messages": 10,
+        "reason": "Báo rõ không có chuyến",
+        "error": ""
+      },
+      {
+        "test_id": "TC08",
+        "success": true,
+        "latency": 138.02,
+        "tool_calls": 21,
+        "messages": 27,
+        "reason": "Đặt vé thành công và đã xác thực trong Database (BK1006)",
+        "error": ""
+      },
+      {
+        "test_id": "TC09",
+        "success": true,
+        "latency": 86.59,
+        "tool_calls": 9,
+        "messages": 17,
+        "reason": "Đặt vé thành công và đã xác thực trong Database (BK1007)",
+        "error": ""
+      },
+      {
+        "test_id": "TC10",
+        "success": true,
+        "latency": 42.69,
+        "tool_calls": 4,
+        "messages": 10,
+        "reason": "Tìm thấy chuyến bay hợp lệ",
+        "error": ""
+      }
+    ]
+  }
+}
